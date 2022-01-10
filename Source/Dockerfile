@@ -61,4 +61,4 @@ RUN sudo update-ca-certificates
 
 ENV ASPNETCORE_URLS=https://+:7000;https://+:7001
 
-ENTRYPOINT ["/usr/bin/supervisord", "-c", "/app/supervisord.conf"]
+CMD echo "127.0.0.1 mock-register" >> /etc/hosts ; /usr/bin/supervisord -c /app/supervisord.conf

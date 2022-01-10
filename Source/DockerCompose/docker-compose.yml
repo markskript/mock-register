@@ -15,8 +15,6 @@ services:
   mock-register:
     container_name: mock-register
     image: consumerdataright/mock-register
-    extra_hosts:
-      - "mock-register:127.0.0.1"
     ports: 
       - "7000:7000"
       - "7001:7001"          
